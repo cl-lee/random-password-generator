@@ -110,17 +110,21 @@ function getPasswordOptions() {
   }
 } 
 
-let builtArray = [];
+getPasswordOptions();
 
 // Function for getting a random element from an array
+let builtArray = [];
+
 function getRandom(arr) {
   for (let i = 0; i < passwordLength; i++) {
-    const element = array[i];
-    
+    let randomIndex = Math.floor(Math.random()*arr.length);
+    let randomCharacter = arr[randomIndex];
+    builtArray = builtArray.concat(randomCharacter);
   }
+  return;
 }
 
-// let randomIndex = Math.floor(Math.random()*bigArray.length)
+getRandom(bigArray);
 
 // Function to generate password with user input
 function generatePassword() {
@@ -131,7 +135,7 @@ function generatePassword() {
   }
 
   return passwordOutput;
-  
+
 }
 
 // Get references to the #generate element
