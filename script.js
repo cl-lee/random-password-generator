@@ -88,6 +88,8 @@ var upperCasedCharacters = [
   'Z'
 ];
 
+let bigArray = [];
+
 // Function to prompt user for password options
 function getPasswordOptions() {
 
@@ -95,16 +97,14 @@ function getPasswordOptions() {
 
 let passwordLength = prompt("Please enter the length of password, it should be between 10 to 64 characters.");
 let lowerCaseOption = confirm("Include lowercase characters? (Click OK for yes, Cancel for no)");
-// let uppercaseOption = confirm("Include uppercase characters? (Click OK for yes, Cancel for no)");
+let upperCaseOption = confirm("Include uppercase characters? (Click OK for yes, Cancel for no)");
 // let numericOption = confirm("Include numeric characters? (Click OK for yes, Cancel for no)");
 // let specialCharOptions = confirm("Include special characters? (Click OK for yes, Cancel for no)");
 
-let bigArray = []
-
 if (lowerCaseOption = true) {
   bigArray = bigArray.concat(lowerCasedCharacters);
-} else if ({
-
+} else if (upperCaseOption = true) {
+  bigArray = bigArray.concat(upperCasedCharacters);
 } 
 
 
