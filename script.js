@@ -89,27 +89,30 @@ var upperCasedCharacters = [
 ];
 
 let bigArray = [];
+let passwordLength = 0;
 
 // Function to prompt user for password options
 function getPasswordOptions() {
-
+  passwordLength = prompt("Please enter the length of password, it should be between 10 to 64 characters.");
+  let lowerCaseOption = confirm("Include lowercase characters? (Click OK for yes, Cancel for no)");
+  let upperCaseOption = confirm("Include uppercase characters? (Click OK for yes, Cancel for no)");
+  let numericOption = confirm("Include numeric characters? (Click OK for yes, Cancel for no)");
+  let specialCharOptions = confirm("Include special characters? (Click OK for yes, Cancel for no)");
+  
+  if (lowerCaseOption) {
+    bigArray = bigArray.concat(lowerCasedCharacters);
+  } if (upperCaseOption) {
+    bigArray = bigArray.concat(upperCasedCharacters);
+  } if (numericOption) {
+    bigArray = bigArray.concat(numericCharacters);
+  } if (specialCharOptions) {
+    bigArray = bigArray.concat(specialCharacters);
+  }
 } 
 
-let passwordLength = prompt("Please enter the length of password, it should be between 10 to 64 characters.");
-let lowerCaseOption = confirm("Include lowercase characters? (Click OK for yes, Cancel for no)");
-let upperCaseOption = confirm("Include uppercase characters? (Click OK for yes, Cancel for no)");
-let numericOption = confirm("Include numeric characters? (Click OK for yes, Cancel for no)");
-let specialCharOptions = confirm("Include special characters? (Click OK for yes, Cancel for no)");
+getPasswordOptions();
 
-if (lowerCaseOption) {
-  bigArray = bigArray.concat(lowerCasedCharacters);
-} if (upperCaseOption) {
-  bigArray = bigArray.concat(upperCasedCharacters);
-} if (numericOption) {
-  bigArray = bigArray.concat(numericCharacters);
-} if (specialCharOptions) {
-  bigArray = bigArray.concat(specialCharacters);
-}
+
 
 
 
