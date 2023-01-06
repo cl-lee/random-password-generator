@@ -98,14 +98,18 @@ function getPasswordOptions() {
 let passwordLength = prompt("Please enter the length of password, it should be between 10 to 64 characters.");
 let lowerCaseOption = confirm("Include lowercase characters? (Click OK for yes, Cancel for no)");
 let upperCaseOption = confirm("Include uppercase characters? (Click OK for yes, Cancel for no)");
-// let numericOption = confirm("Include numeric characters? (Click OK for yes, Cancel for no)");
-// let specialCharOptions = confirm("Include special characters? (Click OK for yes, Cancel for no)");
+let numericOption = confirm("Include numeric characters? (Click OK for yes, Cancel for no)");
+let specialCharOptions = confirm("Include special characters? (Click OK for yes, Cancel for no)");
 
-if (lowerCaseOption = true) {
+if (lowerCaseOption) {
   bigArray = bigArray.concat(lowerCasedCharacters);
-} else if (upperCaseOption = true) {
+} if (upperCaseOption) {
   bigArray = bigArray.concat(upperCasedCharacters);
-} 
+} if (numericOption) {
+  bigArray = bigArray.concat(numericCharacters);
+} if (specialCharOptions) {
+  bigArray = bigArray.concat(specialCharacters);
+}
 
 
 
