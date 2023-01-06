@@ -93,17 +93,22 @@ function getPasswordOptions() {
 
 } 
 
-const passwordLength = prompt("Please enter the length of password, it should be between 10 to 64 characters.");
-const lowerCaseOption = confirm("Include lowercase characters? (Click OK for yes, Cancel for no)");
-// const uppercaseOption = confirm("Include uppercase characters? (Click OK for yes, Cancel for no)");
-// const numericOption = confirm("Include numeric characters? (Click OK for yes, Cancel for no)");
-// const specialCharOptions = confirm("Include special characters? (Click OK for yes, Cancel for no)");
+let passwordLength = prompt("Please enter the length of password, it should be between 10 to 64 characters.");
+let lowerCaseOption = confirm("Include lowercase characters? (Click OK for yes, Cancel for no)");
+// let uppercaseOption = confirm("Include uppercase characters? (Click OK for yes, Cancel for no)");
+// let numericOption = confirm("Include numeric characters? (Click OK for yes, Cancel for no)");
+// let specialCharOptions = confirm("Include special characters? (Click OK for yes, Cancel for no)");
 
 let bigArray = []
 
 if (lowerCaseOption = true) {
   bigArray = bigArray.concat(lowerCasedCharacters);
-}
+} else if ({
+
+} 
+
+
+
 
 
 let builtArray = [];
