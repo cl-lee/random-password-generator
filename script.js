@@ -98,6 +98,7 @@ function getPasswordOptions() {
   return;
 } 
 
+let builtArray = "";
 
 // Function for getting a random element from an array
 function getRandom(arr) {
