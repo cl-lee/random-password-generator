@@ -94,12 +94,19 @@ function getPasswordOptions() {
 } 
 
 const passwordLength = prompt("Please enter the length of password, it should be between 10 to 64 characters.");
-const lowercaseOption = confirm("Include lowercase characters? (Click OK for yes, Cancel for no)");
-const uppercaseOption = confirm("Include uppercase characters? (Click OK for yes, Cancel for no)");
-const numericOption = confirm("Include numeric characters? (Click OK for yes, Cancel for no)");
-const specialCharOptions = confirm("Include special characters? (Click OK for yes, Cancel for no)");
+const lowerCaseOption = confirm("Include lowercase characters? (Click OK for yes, Cancel for no)");
+// const uppercaseOption = confirm("Include uppercase characters? (Click OK for yes, Cancel for no)");
+// const numericOption = confirm("Include numeric characters? (Click OK for yes, Cancel for no)");
+// const specialCharOptions = confirm("Include special characters? (Click OK for yes, Cancel for no)");
 
-let builtArray = "";
+let bigArray = []
+
+if (lowerCaseOption = true) {
+  bigArray = bigArray.concat(lowerCasedCharacters);
+}
+
+
+let builtArray = [];
 
 // Function for getting a random element from an array
 function getRandom(arr) {
