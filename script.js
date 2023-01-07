@@ -94,32 +94,39 @@ var upperCasedCharacters = [
 let bigArray = [];
 let passwordLength = 0;
 let lowerCaseOption;
-let upperCaseOption; 
+let upperCaseOption;
 let numericOption;
 let specialCharOptions;
 
 function getPasswordOptions() {
 
   // to collect the password length
-    function getPasswordLength() {
-      passwordLength = parseInt(prompt("Please enter the length of password. The password should be between 10 to 64 characters."));
-      return passwordLength;
-    }
+  function getPasswordLength() {
+    passwordLength = parseInt(prompt("Please enter the length of password. The password should be between 10 to 64 characters."));
+    return passwordLength;
+  }
+  getPasswordLength();
+
+  // to validate the password length
+  while (passwordLength < 10 || passwordLength > 64 || Number.isNaN(passwordLength)) {
+    alert("Invalid value! Please enter a number between 10 to 64.");
     getPasswordLength();
+  }
 
-    // to validate the password length
-    while (passwordLength < 10 || passwordLength > 64 || Number.isNaN(passwordLength)) {
-      alert("Invalid value! Please enter a number between 10 to 64.");
-      getPasswordLength();
-    }
+  // allows user to choose character types
+  function chooseCharacterTypes() {
+    lowerCaseOption = confirm("Include lowercase characters? ('Ok' = yes, 'Cancel' = no)");
+    upperCaseOption = confirm("Include uppercase characters? ('Ok' = yes, 'Cancel' = no)");
+    numericOption = confirm("Include numeric characters? ('Ok' = yes, 'Cancel' = no)");
+    specialCharOptions = confirm("Include special characters? ('Ok' = yes, 'Cancel' = no)");
+  }
+  chooseCharacterTypes();
 
-    function chooseCharacterTypes () {
-      lowerCaseOption = confirm("Include lowercase characters? ('Ok' = yes, 'Cancel' = no)");
-      upperCaseOption = confirm("Include uppercase characters? ('Ok' = yes, 'Cancel' = no)");
-      numericOption = confirm("Include numeric characters? ('Ok' = yes, 'Cancel' = no)");
-      specialCharOptions = confirm("Include special characters? ('Ok' = yes, 'Cancel' = no)");
-    }
+  // to ensure at least one character type is selected
+  while (!lowerCaseOption && !upperCaseOption && !numericOption && !specialCharOptions) {
+    alert("Error! Please include at least one character type.")
     chooseCharacterTypes();
+  }
 
   if (lowerCaseOption) {
     bigArray = bigArray.concat(lowerCasedCharacters);
@@ -130,7 +137,7 @@ function getPasswordOptions() {
   } if (specialCharOptions) {
     bigArray = bigArray.concat(specialCharacters);
   }
-} 
+}
 
 
 
@@ -139,7 +146,7 @@ let builtArray = [];
 
 function getRandom(arr) {
   for (let i = 0; i < passwordLength; i++) {
-    let randomIndex = Math.floor(Math.random()*arr.length);
+    let randomIndex = Math.floor(Math.random() * arr.length);
     let randomCharacter = arr[randomIndex];
     builtArray = builtArray.concat(randomCharacter);
   }
@@ -153,11 +160,11 @@ let passwordOutput = "";
 
 function generatePassword() {
 
-getPasswordOptions();
-getRandom(bigArray);
+  getPasswordOptions();
+  getRandom(bigArray);
 
   for (let i = 0; i < passwordLength; i++) {
-      passwordOutput += builtArray[i]
+    passwordOutput += builtArray[i]
   }
 
   return passwordOutput;
