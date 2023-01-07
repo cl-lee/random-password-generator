@@ -88,10 +88,12 @@ var upperCasedCharacters = [
   'Z'
 ];
 
+
+
+// Function to prompt user for password options
 let bigArray = [];
 let passwordLength = 0;
 
-// Function to prompt user for password options
 function getPasswordOptions() {
   passwordLength = prompt("Please enter the length of password, it should be between 10 to 64 characters.");
   let lowerCaseOption = confirm("Include lowercase characters? (Click OK for yes, Cancel for no)");
@@ -126,7 +128,6 @@ function getRandom(arr) {
 
 
 // Function to generate password with user input
-
 
 let passwordOutput = "";
 
