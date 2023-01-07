@@ -89,7 +89,6 @@ var upperCasedCharacters = [
 ];
 
 
-
 // Function to prompt user for password options
   
   // variables for this function
@@ -145,7 +144,6 @@ function getPasswordOptions() {
 }
 
 
-
 // Function for getting a random element from an array
 let builtArray = [];
 
@@ -174,6 +172,7 @@ function generatePassword() {
 
   return passwordOutput;
 }
+
 
 // Get references to the #generate element
 var generateBtn = document.querySelector('#generate');
