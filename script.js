@@ -91,52 +91,57 @@ var upperCasedCharacters = [
 
 
 // Function to prompt user for password options
-let bigArray = [];
-let passwordLength = 0;
-let lowerCaseOption;
-let upperCaseOption;
-let numericOption;
-let specialCharOptions;
+  
+  // variables for this function
+  let bigArray = [];
+  let passwordLength = 0;
+  let lowerCaseOption;
+  let upperCaseOption;
+  let numericOption;
+  let specialCharOptions;
 
 function getPasswordOptions() {
 
-  // to collect the password length
-  function getPasswordLength() {
-    passwordLength = parseInt(prompt("Please enter the length of password. The password should be between 10 to 64 characters."));
-    return passwordLength;
-  }
-  getPasswordLength();
-
-  // to validate the password length
-  while (passwordLength < 10 || passwordLength > 64 || Number.isNaN(passwordLength)) {
-    alert("Invalid value! Please enter a number between 10 to 64.");
+  // codes for password length
+    // to collect the password length
+    function getPasswordLength() {
+      passwordLength = parseInt(prompt("Please enter the length of password. The password should be between 10 to 64 characters."));
+      return passwordLength;
+    }
     getPasswordLength();
-  }
 
-  // allows user to choose character types
-  function chooseCharacterTypes() {
-    lowerCaseOption = confirm("Include lowercase characters? ('Ok' = yes, 'Cancel' = no)");
-    upperCaseOption = confirm("Include uppercase characters? ('Ok' = yes, 'Cancel' = no)");
-    numericOption = confirm("Include numeric characters? ('Ok' = yes, 'Cancel' = no)");
-    specialCharOptions = confirm("Include special characters? ('Ok' = yes, 'Cancel' = no)");
-  }
-  chooseCharacterTypes();
+    // to validate the password length
+    while (passwordLength < 10 || passwordLength > 64 || Number.isNaN(passwordLength)) {
+      alert("Invalid value! Please enter a number between 10 to 64.");
+      getPasswordLength();
+    }
 
-  // to ensure at least one character type is selected
-  while (!lowerCaseOption && !upperCaseOption && !numericOption && !specialCharOptions) {
-    alert("Error! Please include at least one character type.")
+  // codes for selecting character types
+    // allows user to select character types
+    function chooseCharacterTypes() {
+      lowerCaseOption = confirm("Include lowercase characters? ('Ok' = yes, 'Cancel' = no)");
+      upperCaseOption = confirm("Include uppercase characters? ('Ok' = yes, 'Cancel' = no)");
+      numericOption = confirm("Include numeric characters? ('Ok' = yes, 'Cancel' = no)");
+      specialCharOptions = confirm("Include special characters? ('Ok' = yes, 'Cancel' = no)");
+    }
     chooseCharacterTypes();
-  }
 
-  if (lowerCaseOption) {
-    bigArray = bigArray.concat(lowerCasedCharacters);
-  } if (upperCaseOption) {
-    bigArray = bigArray.concat(upperCasedCharacters);
-  } if (numericOption) {
-    bigArray = bigArray.concat(numericCharacters);
-  } if (specialCharOptions) {
-    bigArray = bigArray.concat(specialCharacters);
-  }
+    // to ensure at least one character type is selected
+    while (!lowerCaseOption && !upperCaseOption && !numericOption && !specialCharOptions) {
+      alert("Error! Please include at least one character type.")
+      chooseCharacterTypes();
+    }
+
+    // for concatenating character types
+    if (lowerCaseOption) {
+      bigArray = bigArray.concat(lowerCasedCharacters);
+    } if (upperCaseOption) {
+      bigArray = bigArray.concat(upperCasedCharacters);
+    } if (numericOption) {
+      bigArray = bigArray.concat(numericCharacters);
+    } if (specialCharOptions) {
+      bigArray = bigArray.concat(specialCharacters);
+    }
 }
 
 
