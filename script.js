@@ -115,7 +115,7 @@ function getPasswordOptions() {
       getPasswordLength();
     }
 
-  // codes for selecting character types
+  // codes for character types
     // allows user to select character types
     function chooseCharacterTypes() {
       lowerCaseOption = confirm("Include lowercase characters? ('Ok' = yes, 'Cancel' = no)");
