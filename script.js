@@ -95,12 +95,25 @@ let bigArray = [];
 let passwordLength = 0;
 
 function getPasswordOptions() {
-  passwordLength = prompt("Please type in the length of password, it should be between 10 to 64 characters.");
+
+  // to collect the password length
+    function getPasswordLength() {
+      passwordLength = parseInt(prompt("Please enter the length of password. The password should be between 10 to 64 characters."));
+      return passwordLength;
+    }
+    getPasswordLength();
+
+    // to validate the password length
+    while (passwordLength < 10 || passwordLength > 64 || Number.isNaN(passwordLength)) {
+      alert("Invalid value! Please enter a number between 10 to 64.");
+      getPasswordLength();
+    }
+
   let lowerCaseOption = confirm("Include lowercase characters? (Click OK for yes, Cancel for no)");
   let upperCaseOption = confirm("Include uppercase characters? (Click OK for yes, Cancel for no)");
   let numericOption = confirm("Include numeric characters? (Click OK for yes, Cancel for no)");
   let specialCharOptions = confirm("Include special characters? (Click OK for yes, Cancel for no)");
-  
+
   if (lowerCaseOption) {
     bigArray = bigArray.concat(lowerCasedCharacters);
   } if (upperCaseOption) {
