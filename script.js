@@ -95,7 +95,7 @@ let bigArray = [];
 let passwordLength = 0;
 
 function getPasswordOptions() {
-  passwordLength = prompt("Please enter the length of password, it should be between 10 to 64 characters.");
+  passwordLength = prompt("Please type in the length of password, it should be between 10 to 64 characters.");
   let lowerCaseOption = confirm("Include lowercase characters? (Click OK for yes, Cancel for no)");
   let upperCaseOption = confirm("Include uppercase characters? (Click OK for yes, Cancel for no)");
   let numericOption = confirm("Include numeric characters? (Click OK for yes, Cancel for no)");
