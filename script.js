@@ -148,11 +148,13 @@ function getPasswordOptions() {
 let builtArray = [];
 
 function getRandom(arr) {
+  
   for (let i = 0; i < passwordLength; i++) {
     let randomIndex = Math.floor(Math.random() * arr.length);
     let randomCharacter = arr[randomIndex];
     builtArray = builtArray.concat(randomCharacter);
   }
+  
   return builtArray;
 }
 
