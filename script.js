@@ -93,6 +93,10 @@ var upperCasedCharacters = [
 // Function to prompt user for password options
 let bigArray = [];
 let passwordLength = 0;
+let lowerCaseOption;
+let upperCaseOption; 
+let numericOption;
+let specialCharOptions;
 
 function getPasswordOptions() {
 
@@ -109,10 +113,14 @@ function getPasswordOptions() {
       getPasswordLength();
     }
 
-  let lowerCaseOption = confirm("Include lowercase characters? (Click OK for yes, Cancel for no)");
-  let upperCaseOption = confirm("Include uppercase characters? (Click OK for yes, Cancel for no)");
-  let numericOption = confirm("Include numeric characters? (Click OK for yes, Cancel for no)");
-  let specialCharOptions = confirm("Include special characters? (Click OK for yes, Cancel for no)");
+    function chooseCharacterTypes () {
+      lowerCaseOption = confirm("Include lowercase characters? (Click OK for yes, Cancel for no)");
+      upperCaseOption = confirm("Include uppercase characters? (Click OK for yes, Cancel for no)");
+      numericOption = confirm("Include numeric characters? (Click OK for yes, Cancel for no)");
+      specialCharOptions = confirm("Include special characters? (Click OK for yes, Cancel for no)");
+    }
+
+    chooseCharacterTypes();
 
   if (lowerCaseOption) {
     bigArray = bigArray.concat(lowerCasedCharacters);
