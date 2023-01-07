@@ -114,12 +114,11 @@ function getPasswordOptions() {
     }
 
     function chooseCharacterTypes () {
-      lowerCaseOption = confirm("Include lowercase characters? (Click OK for yes, Cancel for no)");
-      upperCaseOption = confirm("Include uppercase characters? (Click OK for yes, Cancel for no)");
-      numericOption = confirm("Include numeric characters? (Click OK for yes, Cancel for no)");
-      specialCharOptions = confirm("Include special characters? (Click OK for yes, Cancel for no)");
+      lowerCaseOption = confirm("Include lowercase characters? ('Ok' = yes, 'Cancel' = no)");
+      upperCaseOption = confirm("Include uppercase characters? ('Ok' = yes, 'Cancel' = no)");
+      numericOption = confirm("Include numeric characters? ('Ok' = yes, 'Cancel' = no)");
+      specialCharOptions = confirm("Include special characters? ('Ok' = yes, 'Cancel' = no)");
     }
-
     chooseCharacterTypes();
 
   if (lowerCaseOption) {
