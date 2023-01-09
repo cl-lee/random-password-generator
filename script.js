@@ -131,7 +131,7 @@ function getPasswordOptions() {
       chooseCharacterTypes();
     }
 
-    // for concatenating character types
+    // for concatenating character types with user input
     if (lowerCaseOption) {
       bigArray = bigArray.concat(lowerCasedCharacters);
     } if (upperCaseOption) {
