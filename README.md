@@ -2,7 +2,7 @@
 ## Description
 Welcome to the [Random Password Generator](https://cl-lee.github.io/random-password-generator/) repo! This projects aim to help employees generate a random password through a web application. 
 
-To support users with different needs, the app allows users to select the following password criteria:
+To support users with different needs, users can determine the following password criteria:
 - Password length between 10 to 64 characters
 - Four character types:
     - Lowercase
@@ -10,7 +10,7 @@ To support users with different needs, the app allows users to select the follow
     - Numeric
     - Special characters (!@#$%^, etc.)
 
-After determining the options, the app will generate a random password based on the selected criteria.
+After choosing the options, the app will generate a random password based on the selected criteria.
 
 ## Prerequisites
 A web browser is required to access the application.
