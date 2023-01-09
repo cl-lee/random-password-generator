@@ -19,3 +19,7 @@ A web browser is required to access the application.
 The application can be accessed through the following URL: https://cl-lee.github.io/random-password-generator/  
 
 - Upon landing on the page, users should find the following screen:
+![The Random Password Generator webpage](./assets/landing-page.png)  
+
+- To generate a password, users can click on the "Generate Password" button
+![The "Generate Password" button](./assets/generate-password.png)
