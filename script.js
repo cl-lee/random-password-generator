@@ -100,7 +100,6 @@ var upperCasedCharacters = [
   let specialCharOptions;
 
 function getPasswordOptions() {
-
   // codes for password length
     // to collect the password length
     function getPasswordLength() {
@@ -148,7 +147,7 @@ function getPasswordOptions() {
 let builtArray = [];
 
 function getRandom(arr) {
-  
+  builtArray = [];
   for (let i = 0; i < passwordLength; i++) {
     let randomIndex = Math.floor(Math.random() * arr.length);
     let randomCharacter = arr[randomIndex];
@@ -164,6 +163,7 @@ function getRandom(arr) {
 let passwordOutput = "";
 
 function generatePassword() {
+  bigArray = [];
 
   getPasswordOptions();
   getRandom(bigArray);
@@ -183,7 +183,6 @@ var generateBtn = document.querySelector('#generate');
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector('#password');
-
   passwordText.value = password;
 }
 
