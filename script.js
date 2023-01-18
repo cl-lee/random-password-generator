@@ -164,7 +164,7 @@ let passwordOutput = "";
 
 function generatePassword() {
   bigArray = [];
-
+  passwordOutput = "";
   getPasswordOptions();
   getRandom(bigArray);
 
