@@ -119,6 +119,7 @@ button[disabled] {
   overflow: hidden;
 }
 
+/* styles the copy password button */
 #copy-password {
   position: absolute;
   right: 0;
