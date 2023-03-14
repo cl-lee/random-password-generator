@@ -37,3 +37,7 @@ The application can be accessed through the following URL: https://cl-lee.github
     ![Character type prompts](./assets/character-types.png)
     - The application will notify users if they chose not to include at least one character type. Users can then select which character type to include again after confirming the alert.
     ![Alert! No character type was selected](./assets/character-type-error.png)
+
+### Copy generated password
+- To copy the generated password, users can click on the "Copy" button. The password will be saved onto the user's device clipboard.
+![The copy button](./assets/copy-button.png)
