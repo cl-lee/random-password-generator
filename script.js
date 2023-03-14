@@ -196,36 +196,37 @@ function generatePassword() {
   return passwordOutput;
 }
 
+// VARIABLE FOR GENERATING AND COPYING PASSWORD
+var passwordText = document.querySelector("#password");
+
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
-  var passwordText = document.querySelector("#password");
   passwordText.value = password;
 }
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-// copy password function
+// COPIES PASSWORD WITH COPY BUTTON
+// Copy password function
 const copyPassword = () => {
-  // 1) get the text field:
-  const textField = document.querySelector("#password");
 
-  // 2) select the text field and name its value as a variable
-  textField.select();
-  textField.setSelectionRange(0, 99999); // For mobile devices
-  let passwordValue = textField.value;
+  // selects password text field
+  passwordText.select();
+  passwordText.setSelectionRange(0, 99999); // For mobile devices
+  let passwordValue = passwordText.value;
 
-  // 3) copy text inside the text field
+  // copy text inside the text field
   navigator.clipboard.writeText(passwordValue);
 
-  // 4) alert the copied text
+  // alert copied password
   alert("Copied password!");
 };
 
-// attach event listener to copy button
+// Copies password on clicking the copy button
 const copyButton = document.querySelector("#copy-password");
 copyButton.addEventListener("click", copyPassword);
